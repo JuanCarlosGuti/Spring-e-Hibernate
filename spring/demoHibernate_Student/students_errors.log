@@ -1,0 +1,47 @@
+[2021-09-2415:25:34] [ ERROR] [GlobalExceptionHandler:24] Student Not Exist
+[2021-09-2415:27:17] [ ERROR] [GlobalExceptionHandler:24] Student Not Exist
+[2021-09-2415:33:27] [ ERROR] [GlobalExceptionHandler:24] Student Not Exist ServletWebRequest: uri=/students/222222;client=0:0:0:0:0:0:0:1
+[2021-09-2415:35:53] [ ERROR] [GlobalExceptionHandler:24] Student Not Exist null
+[2021-09-2415:38:42] [ ERROR] [GlobalExceptionHandler:24] Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "list"
+[2021-09-2417:10:08] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:10:22] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:11:01] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:14:39] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:15:45] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:19:46] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:21:04] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:22:35] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:23:37] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:24:48] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:26:51] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:27:50] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:29:50] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:30:41] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:31:33] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:32:37] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:36:10] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:36:36] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2417:37:00] [ ERROR] [GlobalExceptionHandler:24] could not execute statement; SQL [n/a]; constraint ["FKGMAGJL75GQ0NWVYBIC6DFNM82: PUBLIC.COURSES FOREIGN KEY(STUDENT_ID) REFERENCES PUBLIC.STUDENTS(ID) (18)"; SQL statement:
+delete from students where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-2623:42:41] [ ERROR] [GlobalExceptionHandler:24] Request method 'POST' not supported
+[2021-09-2623:47:10] [ ERROR] [GlobalExceptionHandler:24] not-null property references a null or transient value : com.example.demo.model.Course.student; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.example.demo.model.Course.student
+[2021-09-2700:03:00] [ ERROR] [GlobalExceptionHandler:24] Request method 'POST' not supported
+[2021-09-2700:03:33] [ ERROR] [GlobalExceptionHandler:24] not-null property references a null or transient value : com.example.demo.model.Course.student; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.example.demo.model.Course.student

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.academia.dao.EstudianteDaoH2Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.552 s <<< FAILURE! - in com.academia.dao.EstudianteDaoH2Test
+guardarYBuscarEstudiantesTest(com.academia.dao.EstudianteDaoH2Test)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.academia.dao.EstudianteDaoH2Test.guardarYBuscarEstudiantesTest(EstudianteDaoH2Test.java:30)
+
+traerTodosLosEstudiantesTest(com.academia.dao.EstudianteDaoH2Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.academia.dao.EstudianteDaoH2Test.traerTodosLosEstudiantesTest(EstudianteDaoH2Test.java:38)
+

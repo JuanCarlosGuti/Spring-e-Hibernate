@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.academia.service.EstudianteServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! - in com.academia.service.EstudianteServiceTest
+buscarEstudiantesCambiandoImplementacionDAO(com.academia.service.EstudianteServiceTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "companymaven.academia.model.Estudiante.getNombre()" because "estudiante" is null
+	at com.academia.service.EstudianteServiceTest.buscarEstudiantesCambiandoImplementacionDAO(EstudianteServiceTest.java:50)
+

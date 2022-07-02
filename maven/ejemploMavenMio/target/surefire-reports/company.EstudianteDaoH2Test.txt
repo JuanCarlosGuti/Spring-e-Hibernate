@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: company.EstudianteDaoH2Test
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.424 s <<< FAILURE! - in company.EstudianteDaoH2Test
+buscarEstudiantes(company.EstudianteDaoH2Test)  Time elapsed: 0.222 s  <<< ERROR!
+java.lang.RuntimeException: 
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Archivo corrupto mientras se leía el registro: null. Solución Posible: use la herramienta de recuperación (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at company.EstudianteDaoH2Test.buscarEstudiantes(EstudianteDaoH2Test.java:17)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: 
+Archivo corrupto mientras se leía el registro: null. Solución Posible: use la herramienta de recuperación (recovery tool)
+File corrupted while reading record: null. Possible solution: use the recovery tool [90030-200]
+	at company.EstudianteDaoH2Test.buscarEstudiantes(EstudianteDaoH2Test.java:17)
+Caused by: java.lang.IllegalStateException: The write format 2 is larger than the supported format 1, and the file was not opened in read-only mode [1.4.200/5]
+	at company.EstudianteDaoH2Test.buscarEstudiantes(EstudianteDaoH2Test.java:17)
+
