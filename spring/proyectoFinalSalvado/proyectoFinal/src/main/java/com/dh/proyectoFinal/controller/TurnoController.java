@@ -57,8 +57,11 @@ public class TurnoController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
-        public ResponseEntity<String>
+        @ExceptionHandler({ResourceNotFoundException.class})
+        public ResponseEntity<String> procesarErrorNotFound(ResourceNotFoundException ex){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 
+        }
 
     }
 

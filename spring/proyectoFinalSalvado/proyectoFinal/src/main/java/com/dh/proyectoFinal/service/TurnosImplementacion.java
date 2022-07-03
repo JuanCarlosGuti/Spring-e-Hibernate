@@ -31,7 +31,9 @@ public class TurnosImplementacion implements ITurnosService{
     }
 
     @Override
-    public Turno actualizarTurno(Turno t) {
+    public Turno actualizarTurno(Turno t) throws ResourceNotFoundException{
+        if (buscarTurno(t.getId())==null)
+            throw new ResourceNotFoundException(" No hay un turno con ese ID");
         return iTurnoRepository.save(t);
 
     }
