@@ -2,7 +2,7 @@ package com.dh.proyectoFinal.service;
 
 
 import com.dh.proyectoFinal.entity.Turno;
-import com.dh.proyectoFinal.exceptions.ResourceNotFoundException;
+import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.repository.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,23 +31,25 @@ public class TurnosImplementacion implements ITurnosService{
     }
 
     @Override
-    public Turno actualizarTurno(Turno t) throws ResourceNotFoundException{
+    public Turno actualizarTurno(Turno t) throws NoEncontradoIdException {
         if (buscarTurno(t.getId())==null)
-            throw new ResourceNotFoundException(" No hay un turno con ese ID");
+            throw new NoEncontradoIdException(" No hay un turno con el ID "+t.getId());
         return iTurnoRepository.save(t);
 
     }
 
     @Override
-    public void eliminarTurno(int id) throws ResourceNotFoundException {
+    public void eliminarTurno(int id) throws NoEncontradoIdException {
         if (buscarTurno(id)==null)
-             throw new ResourceNotFoundException("no existe un turno con ese ID");
+             throw new NoEncontradoIdException("no existe un turno con ese ID "+id);
         iTurnoRepository.deleteById(id);
     }
 
 
     @Override
-    public Turno buscarTurno(int id) {
+    public Turno buscarTurno(int id) throws NoEncontradoIdException {
+        if (buscarTurno(id)==null)
+            throw new NoEncontradoIdException("no existe un turno con ese ID "+id);
         Turno turno=null;
         Optional<Turno> optionaPaciente= iTurnoRepository.findById(id);
         if (optionaPaciente.isPresent()){

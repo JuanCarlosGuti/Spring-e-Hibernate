@@ -1,6 +1,7 @@
 package com.dh.proyectoFinal.controller;
 
 import com.dh.proyectoFinal.entity.Paciente;
+import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.PacienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +32,7 @@ public class PacienteController {
     }
 
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable Integer id){
+    public void eliminar(@PathVariable Integer id) throws NoEncontradoIdException {
        pacienteService.eliminarPaciente(id);
 
     }
@@ -42,7 +43,7 @@ public class PacienteController {
     }
 
     @PutMapping
-    public Paciente modificarCliente(@RequestBody Paciente p){
+    public Paciente modificarCliente(@RequestBody Paciente p) throws NoEncontradoIdException {
         return pacienteService.actualizarPaciente(p);
     }
 

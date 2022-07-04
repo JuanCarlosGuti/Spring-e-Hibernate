@@ -2,6 +2,7 @@ package com.dh.proyectoFinal;
 
 import com.dh.proyectoFinal.entity.Domicilio;
 import com.dh.proyectoFinal.entity.Paciente;
+import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.DomicilioServiceImp;
 import com.dh.proyectoFinal.service.PacienteServiceImp;
 import org.junit.Assert;
@@ -58,7 +59,7 @@ public class PacienteServiceTest {
     }
 
     @Test
-    public void eliminar(){
+    public void eliminar() throws NoEncontradoIdException {
         pacienteService.eliminarPaciente(1);
         Assert.assertTrue(pacienteService.buscarXId(1)==null);
     }

@@ -1,6 +1,6 @@
 package com.dh.proyectoFinal.controller;
 import com.dh.proyectoFinal.entity.Turno;
-import com.dh.proyectoFinal.exceptions.ResourceNotFoundException;
+import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,30 +38,27 @@ public class TurnoController {
 
 
         @GetMapping("/{id}")
-        public Turno buscarTurnoXid(@PathVariable int id){
+        public Turno buscarTurnoXid(@PathVariable int id) throws NoEncontradoIdException {
             return turnosService.buscarTurno(id);
         }
 
 
         @DeleteMapping("/{id}")
-        public ResponseEntity elimanrTurno(@PathVariable int id) throws ResourceNotFoundException {
+        public ResponseEntity elimanrTurno(@PathVariable int id) throws NoEncontradoIdException {
             turnosService.eliminarTurno(id);
             return ResponseEntity.ok("turno eliminado");
         }
 
         @PutMapping
-        public ResponseEntity<Turno> actualTurno(@RequestBody Turno turno){
-            if (turnosService.buscarTurno(turno.getId())!=null){
-                return ResponseEntity.ok(turnosService.actualizarTurno(turno));
-            }else
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        public Turno actualTurno(@RequestBody Turno turno) throws NoEncontradoIdException {
+              return turnosService.actualizarTurno(turno);
         }
 
-        @ExceptionHandler({ResourceNotFoundException.class})
+      /*  @ExceptionHandler({ResourceNotFoundException.class})
         public ResponseEntity<String> procesarErrorNotFound(ResourceNotFoundException ex){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 
-        }
+        }*/
 
     }
 

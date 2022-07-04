@@ -2,6 +2,7 @@ package com.dh.proyectoFinal.service;
 
 
 import com.dh.proyectoFinal.entity.Paciente;
+import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -44,12 +45,16 @@ public class PacienteServiceImp implements IpacienteService {
     }
 
     @Override
-    public Paciente actualizarPaciente(Paciente p) {
+    public Paciente actualizarPaciente(Paciente p) throws NoEncontradoIdException {
+        if (buscarXId(p.getId())==null)
+            throw new NoEncontradoIdException("No encontramos un pacinete con el id "+p.getId());
         return pacienteRepository.save(p);
     }
 
     @Override
-    public void eliminarPaciente(Integer id) {
+    public void eliminarPaciente(Integer id) throws NoEncontradoIdException {
+        if (buscarXId(id)==null)
+            throw new NoEncontradoIdException("No encontramos un pacinete con el id "+id);
         pacienteRepository.deleteById(id);
 
     }
