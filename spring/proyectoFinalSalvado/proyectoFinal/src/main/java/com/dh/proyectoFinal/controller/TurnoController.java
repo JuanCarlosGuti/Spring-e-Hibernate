@@ -1,5 +1,6 @@
 package com.dh.proyectoFinal.controller;
 import com.dh.proyectoFinal.entity.Turno;
+import com.dh.proyectoFinal.exceptions.BadRequestException;
 import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +60,10 @@ public class TurnoController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 
         }*/
+    @ExceptionHandler({BadRequestException.class})
+    public ResponseEntity<String> procesarErrorBadRequest(BadRequestException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
 
     }
 
