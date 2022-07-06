@@ -3,7 +3,6 @@ package com.dh.proyectoFinal.entity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -13,35 +12,18 @@ import java.util.Collections;
 @Table(name = "usuarios")
 public class Usuario implements UserDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuario_secuencia")
     private Long id;
+    @Column
     private String nombre;
-    private String username;
+    @Column
+    private String userName;
+    @Column
     private String email;
+    @Column
     private String password;
     @Enumerated(EnumType.STRING)
     private UsuarioRol rol;
-
-
-
-    public Usuario() {
-    }
-
-    public Usuario(Long id, String nombre, String username, String email, String password, UsuarioRol rol) {
-        this.id = id;
-        this.nombre = nombre;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.rol = rol;
-    }
-
-    public Usuario(String nombre, String username, String email, String password, UsuarioRol rol) {
-        this.nombre = nombre;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.rol = rol;
-    }
 
     public Long getId() {
         return id;
@@ -59,8 +41,12 @@ public class Usuario implements UserDetails {
         this.nombre = nombre;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {
@@ -69,6 +55,41 @@ public class Usuario implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        SimpleGrantedAuthority grantedAuthority= new SimpleGrantedAuthority(rol.name());
+        return Collections.singletonList(grantedAuthority);
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return userName;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
     public void setPassword(String password) {
@@ -83,39 +104,14 @@ public class Usuario implements UserDetails {
         this.rol = rol;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority(rol.name());
-        return Collections.singletonList(grantedAuthority);
+    public Usuario(String nombre, String userName, String email, String password, UsuarioRol rol) {
+        this.nombre = nombre;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.rol = rol;
     }
 
-    @Override
-    public String getPassword() {
-        return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
+    public Usuario() {
     }
 }
