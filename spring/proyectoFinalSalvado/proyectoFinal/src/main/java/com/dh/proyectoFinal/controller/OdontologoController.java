@@ -21,8 +21,8 @@ public class OdontologoController {
     }
 
     @GetMapping("/{id}")
-    public Odontologo buscarOdontologoXId(@PathVariable int id ){
-        return odontologoService.buscarXId(id);
+    public ResponseEntity< Odontologo> buscarOdontologoXId(@PathVariable int id ){
+        return ResponseEntity.ok(odontologoService.buscarXId(id));
     }
 
     @PostMapping

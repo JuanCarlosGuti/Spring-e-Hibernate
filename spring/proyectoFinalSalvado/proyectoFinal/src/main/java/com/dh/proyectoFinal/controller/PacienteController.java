@@ -4,6 +4,8 @@ import com.dh.proyectoFinal.entity.Paciente;
 import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.PacienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +24,8 @@ public class PacienteController {
     }
 
     @GetMapping("/lista")
-    public List<Paciente> traerPacientes(){
-        return pacienteService.listarPacientes();
+    public ResponseEntity<List<Paciente>> traerPacientes(){
+        return ResponseEntity.ok( pacienteService.listarPacientes());
     }
 
     @GetMapping("/{id}")

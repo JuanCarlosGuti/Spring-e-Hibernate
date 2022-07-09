@@ -21,7 +21,6 @@ import java.util.List;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
 public class PacienteServiceTest {
     @Autowired
     private PacienteServiceImp pacienteService;
