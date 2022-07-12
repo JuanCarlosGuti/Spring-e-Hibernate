@@ -2,10 +2,14 @@ package com.dh.proyectoFinal.service;
 
 import com.dh.proyectoFinal.entity.Paciente;
 import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
 public interface IpacienteService {
+
+
+
     List<Paciente> listarPacientes();
 
 

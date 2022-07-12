@@ -5,6 +5,7 @@ import com.dh.proyectoFinal.entity.Paciente;
 import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.service.DomicilioServiceImp;
 import com.dh.proyectoFinal.service.PacienteServiceImp;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -29,9 +30,12 @@ public class PacienteServiceTest {
     @Autowired
     private DomicilioServiceImp domicilioService;
 
+    private static final Logger logger = Logger.getLogger(PacienteServiceTest.class);
 
     //@BeforeClass
     public void cargarDataSet() {
+        logger.info("se cargaron los datos correctamente");
+
         Domicilio domicilio = new Domicilio("Av Santa fe", 444, "CABA", "Buenos Aires");
         Paciente p = pacienteService.guardarPaciente (new Paciente("gutierrez","Juan","juancgutierrez@gmail.com",123,LocalDate.now(),domicilio));
         Domicilio domicilio1 = new Domicilio("Av Avellaneda", 333, "CABA", "Buenos Aires");
@@ -41,6 +45,7 @@ public class PacienteServiceTest {
 
     @Test
     public void agregarYBuscarPacienteTest() {
+
 
         Domicilio domicilio = new Domicilio("Calle", 123, "Temperley", "Buenos Aires");
         Paciente p2 =new Paciente("Tomas", "Pereyra","juangmail.com" ,12345678, LocalDate.now(), domicilio);

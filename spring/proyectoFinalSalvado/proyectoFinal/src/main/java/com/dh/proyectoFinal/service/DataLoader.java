@@ -5,6 +5,7 @@ import com.dh.proyectoFinal.entity.Usuario;
 import com.dh.proyectoFinal.entity.UsuarioRol;
 import com.dh.proyectoFinal.repository.UsuarioRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,7 +17,7 @@ public class DataLoader implements ApplicationRunner {
 
     //para agregar usuarios en la base de datos...
     private UsuarioRepository iUsuarioRepository;
-
+    @Autowired
     public DataLoader(UsuarioRepository iUsuarioRepository) {
         this.iUsuarioRepository = iUsuarioRepository;
     }

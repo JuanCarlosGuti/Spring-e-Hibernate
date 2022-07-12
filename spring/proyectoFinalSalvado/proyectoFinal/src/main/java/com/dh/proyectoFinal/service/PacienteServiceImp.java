@@ -4,6 +4,7 @@ package com.dh.proyectoFinal.service;
 import com.dh.proyectoFinal.entity.Paciente;
 import com.dh.proyectoFinal.exceptions.NoEncontradoIdException;
 import com.dh.proyectoFinal.repository.PacienteRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,9 @@ import java.util.Optional;
 
 @Service
 public class PacienteServiceImp implements IpacienteService {
+
+
+    private static final Logger logger = Logger.getLogger(PacienteServiceImp.class);
 
     PacienteRepository pacienteRepository;
 
@@ -35,13 +39,17 @@ public class PacienteServiceImp implements IpacienteService {
         Optional<Paciente> optionaPaciente= pacienteRepository.findById(id);
         if (optionaPaciente.isPresent()){
             paciente= optionaPaciente.get();
+            logger.info(" el id esta presente en la base de datos");
+
         }
         return paciente;
     }
 
     @Override
     public Paciente guardarPaciente(Paciente p) {
+        logger.info(" el paciente se creo correctamente");
         return pacienteRepository.save(p);
+
     }
 
     @Override
